@@ -1,0 +1,68 @@
+#slides{
+  position: relative;
+  height: 300px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.slide{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 1s;
+}
+.showing{
+  opacity: 1;
+  z-index: 2;
+}
+.controls{
+  display: none;
+}
+.slide{
+  font-size: 40px;
+  padding: 40px;
+  box-sizing: border-box;
+  background: #333;
+  color: #fff;
+  background-size: cover;
+}
+
+.slide:nth-of-type(1){
+  background-image: url('http://lorempixel.com/600/400/');
+}
+.slide:nth-of-type(2){
+  background-image: url('http://lorempixel.com/800/400/');
+}
+.slide:nth-of-type(3){
+  background-image: url('http://lorempixel.com/400/400/');
+}
+.controls{
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 20px 0;
+  font-size: 20px;
+  cursor: pointer;
+  border: 2pz solid #fff;
+  margin: 10px 0 0 10px;
+  width: 70px;
+}
+.controls:hover,
+.controls:focus{
+  background: #eee;
+  color: #333;
+}
+.container{
+  position: relative;
+}
+.buttons{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  font-size: 0;
+}
